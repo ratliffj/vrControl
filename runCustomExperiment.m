@@ -19,7 +19,7 @@ function runCustomExperiment(expInfo, animal, session, trainingMode, wheelGain)
     % Set up trialStructure (not needed?)
     % trialStructure.envIndex = []; % vector with indices of VR environments to use for each trial
     % trialStructure.envLength = []; % vector with lengths of each VR environment (in cm)
-
+    trialStructure.getEnvPath = @(idx) fullfile(expSettings.vrDirectory, [expSettings.vrOptions{idx} '.tif']); % function handle to get full path of VR environment file based on index
 
     %% 2. Prepare expInfo and rigInfo structures
 
