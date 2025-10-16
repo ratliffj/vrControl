@@ -35,6 +35,7 @@ function runCustomExperiment(expInfo, animal, session, trainingMode, wheelGain)
     expInfo.trainingMode = trainingMode;
     expInfo.animalName = animal;
     expInfo.sessionName = session + 1; 
+    expInfo.mvmtGain(:) = wheelGain;
     expInfo.dateStr = datestr(now, 'yyyymmdd');
     while true
         % While loop ensures that the sessionName is novel
